@@ -1,4 +1,4 @@
-from routes import web
+import route
 
 if __name__ == '__main__':
-    web.run()
+    route.run()
