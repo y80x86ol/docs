@@ -14,6 +14,9 @@ def home():
 def test():
     return Test.index()
 
+@app.route("/test/users")
+def test_users():
+    return Test.users()
 
 def run():
     app.run()

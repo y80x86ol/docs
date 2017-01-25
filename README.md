@@ -10,3 +10,16 @@
 Windows:
 
     进入目录，venv\scripts\activate
+
+
+### 各种附加组件安装
+
+
+sqlalchemy
+
+    http://docs.sqlalchemy.org/en/latest/intro.html
+    pip install SQLAlchemy
+
+Flask-SQLAlchemy
+
+    pip install Flask-SQLAlchemy
