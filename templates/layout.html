@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block head %}
+
+    <title>{% block title %}{% endblock %}</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="static/component/element-ui/index.css">
+    <!-- 引入全局样式 -->
+    <link rel="stylesheet" href="static/css/app.css">
+    {% endblock %}
+</head>
+<body>
+<div id="header">
+</div>
+<div id="app">
+    {% block content %}
+    {% endblock %}
+</div>
+<div id="footer">
+</div>
+</body>
+{% block static %}
+<!-- 先引入 Vue -->
+<script src="static/component/element-ui/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="static/component/element-ui/index.js"></script>
+<!-- 引入全局js-->
+<script src="static/js/app.js"></script>
+{% endblock %}
+</html>
