@@ -20,10 +20,6 @@ class Users(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
-    def save(self, users):
-        db.session.add(users)
-        db.session.commit()
-
 
 def fields():
     return {
