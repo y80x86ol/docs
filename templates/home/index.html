@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="static/component/element-ui/index.css">
+
+    <link rel="stylesheet" href="static/css/app.css">
 </head>
 <body>
-首页
+<div id="app">
+    <el-button @click="visible = true">按钮</el-button>
+    <el-dialog v-model="visible" title="Hello world">
+        <p>欢迎使用 Element</p>
+    </el-dialog>
+</div>
 </body>
+<!-- 先引入 Vue -->
+<script src="static/component/element-ui/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="static/component/element-ui/index.js"></script>
+<script src="static/js/app.js"></script>
 </html>
