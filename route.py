@@ -1,8 +1,8 @@
-from flask import Flask
-
 from app.Http.Controllers import Home, Test
 
-app = Flask(__name__)
+import bootstrap
+
+app = bootstrap.app
 
 
 @app.route("/")
