@@ -8,6 +8,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 
+# 模型
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True)
@@ -21,16 +22,8 @@ class Users(db.Model):
         return '<User %r>' % self.username
 
 
-def fields():
-    return {
-        # 用户名
-        'username': {
-            'type': 'string',
-            'default': ''
-        },
-        # 密码
-        'password': {
-            'type': 'string',
-            'default': ''
-        }
-    }
+# 写入数据库
+def addUser(username, email):
+    user = Users(username, email)
+    db.session.add(user)
+    db.session.commit()

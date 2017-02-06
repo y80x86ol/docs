@@ -8,7 +8,5 @@ def index():
 
 
 def users():
-    admin = Users('admin', 'admin@example.com')
-    db.session.add(admin)
-    db.session.commit()
-    return '234'
+    Users.addUser('admin', 'admin@example.com')
+    return '添加用户成功'
