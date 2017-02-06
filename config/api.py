@@ -1,4 +1,4 @@
-# 网站配置文件
+# API接口配置文件
 config = {
     'debug': True
 }
