@@ -25,3 +25,7 @@ Flask-SQLAlchemy
     http://flask.pocoo.org/docs/0.12/patterns/sqlalchemy/
     pip install Flask-SQLAlchemy
 
+PyMySQL(python3支持)
+    
+    http://mookrs.com/flask-sqlalchemy-mysql-python-3/
+    pip install PyMySQL

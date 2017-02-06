@@ -1,11 +1,6 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from app.Models import BaseModel
 
-# db = SQLAlchemy.create_engine("mysql://root:root@localhost/blog")
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/docs'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-db = SQLAlchemy(app)
+db = BaseModel.connect()
 
 
 # 模型
@@ -22,8 +17,21 @@ class Users(db.Model):
         return '<User %r>' % self.username
 
 
-# 写入数据库
+# 添加一个用户
 def addUser(username, email):
     user = Users(username, email)
     db.session.add(user)
     db.session.commit()
+    return 1
+
+
+def deleteUser(uid):
+    user = Users.query.filter(Users.id == '3').first()
+    db.session.delete(user)
+    db.session.commit()
+    return 1
+
+
+def userList():
+    userList = Users.query.all()
+    return userList

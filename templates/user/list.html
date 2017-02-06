@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}测试-会员列表{% endblock %}
+
+
+{% block content %}
+
+{% for user in userList %}
+{{ user.username }}<br>
+{% endfor %}
+
+
+{% endblock %}
+
+
+{% block static %}
+{{ super() }}
+<script src="static/js/home/home.js"></script>
+{% endblock %}
